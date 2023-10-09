@@ -1,7 +1,21 @@
 function isPalindrome(word) {
   // Write your algorithm here
 }
+function isPalindrome(inputString) {
+  const cleanedString = inputString.toLowerCase().replace(/\s/g, '');
+  let start = 0;
+  let end = cleanedString.length - 1;
 
+  while (start < end) {
+      if (cleanedString[start] !== cleanedString[end]) {
+          return false;
+      }
+      start++;
+      end--;
+  }
+
+  return true;
+}
 /* 
   Add your pseudocode here
 */
